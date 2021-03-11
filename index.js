@@ -1,4 +1,8 @@
+marked.setOptions({
+    breaks: true
+});
 
+const renderer = new marked.Renderer();
 
 function App() {
 
@@ -23,7 +27,12 @@ function App() {
 
 function Preview({markdown}){
     return (
-        <div></div>
+        <div
+        dangerouslySetInnerHTML= {{
+            __html: marked(markdown, { renderer: renderer})
+            }}
+            id="preview"
+        ></div>
     )
 }
 ReactDOM.render(
