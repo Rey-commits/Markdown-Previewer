@@ -10,7 +10,7 @@ function App() {
 
     return (
         <div className="text-center px-4">
-            <h1 className="p-4">My Mardown Previewer</h1>
+            <h1 className="p-4">Mardown Previewer</h1>
             <textarea 
             name="text" 
             id="text" 
